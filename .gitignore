@@ -1,2 +1,8 @@
 chromedriver.exe
 .idea
+*.png
+*.jpg
+__pycache__
+build
+dist
+*.spec
