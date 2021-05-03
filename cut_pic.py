@@ -6,8 +6,8 @@ def crop_img(img):
     img = cv2.imread(img)
     # cv2.imshow('imit', img)
     # 裁切區域的 x 與 y 座標（左上角）
-    x = 935
-    y = 467
+    x = 941
+    y = 490
 
     # 裁切區域的長度與寬度
     w = 30

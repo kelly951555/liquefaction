@@ -52,8 +52,14 @@ else:
     # 新增縮放，防止圖片失真
     driver.find_element_by_xpath('//*[@id="map"]/div[2]/div[1]/div[1]/div[1]/button/i').click()
     time.sleep(1)
-    driver.find_element_by_xpath('//*[@id="map"]/div[2]/div[1]/div[1]/div[2]/button/i').click()
+    driver.find_element_by_xpath('//*[@id="map"]/div[2]/div[1]/div[1]/div[1]/button/i').click()
     time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="map"]/div[2]/div[1]/div[1]/div[1]/button/i').click()
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="map"]/div[2]/div[1]/div[1]/div[1]/button/i').click()
+    time.sleep(1)
+    # driver.find_element_by_xpath('//*[@id="map"]/div[2]/div[1]/div[1]/div[2]/button/i').click()
+    # time.sleep(1)
 # 點選'地質圖'
     map_tab = driver.find_element_by_id('map_tab_geo')
     map_tab.click()
@@ -71,14 +77,14 @@ else:
 
     crop_img(pickpath)
     # print(get_RGBColorCode('crop.jpg', 0, 0))
-    liquefaction = get_RGBColorCode('crop.jpg', 5, 5)
+    liquefaction = get_RGBColorCode('crop.jpg', 0, 0)
     print(liquefaction)
     # 以RGB判斷液化範圍
-    if liquefaction[0]<200 and liquefaction[1]>200 and liquefaction[2]<200:
+    if liquefaction[0]<190 and liquefaction[1]>190 and liquefaction[2]<190:
         print('土壤液化低潛勢範圍')
-    elif liquefaction[0]>200 and liquefaction[1]>200 and liquefaction[2]<200:
+    elif liquefaction[0]>190 and liquefaction[1]>190 and liquefaction[2]<190:
         print('土壤液化中潛勢範圍')
-    elif liquefaction[0]>200 and liquefaction[1]<200 and liquefaction[2]<200:
+    elif liquefaction[0]>190 and liquefaction[1]<190 and liquefaction[2]<190:
         print('土壤液化高潛勢範圍')
     else:
         print('未調查區')
